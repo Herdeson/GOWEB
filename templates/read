@@ -1,0 +1,14 @@
+docker run -p 5432:5432 --name goweb_db \
+-e POSTGRES_PASSWORD=secret@123 -e POSTGRES_DB=alura_loja \
+-v C:\Users\herde\Documents\psql_goweb:/var/lib/postgresql/data -d postgres
+
+
+
+# Criar tabela
+create table produtos  (
+	id serial primary key,
+	nome varchar,
+	descricao varchar,
+	preco decimal,
+	quantidade integer
+)
